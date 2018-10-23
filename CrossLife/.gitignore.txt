@@ -1,0 +1,83 @@
+# Integration ignores
+**/xcuserdata/
+integration/android/Integration/module/source/**
+integration/ios/Integration/Source/**
+integration/ios/SampleApp/*.framework
+
+# Build ignores
+/[Bb]uild/
+/[Bb]uilds/
+/screenshots/
+
+# Unity Project ignores
+project/Library/
+project/Temp/
+project/obj/
+project/QCAR/
+project/.vs/
+project/.idea/
+project/*.sln
+project/*.csproj
+project/*.csproj.user
+project/*.unityproj
+project/*.userprefs
+project/NativePlugins/
+project/Assets/0_GITIgnore/
+project/Assets/0_GITIgnore.meta
+project/Assets/Models/
+project/Assets/Models.meta
+project/Assets/Plugins/Editor/JetBrains/
+project/Assets/Plugins/Editor/
+project/Assets/Plugins/Editor.meta
+project/Assets/Plugins/Editor/JetBrains.meta
+project/Assets/SVFUnityPlugin/PreviewAssets/
+project/Assets/2D/COMPS/
+project/Assets/2D/COMPS.meta
+project/Assets/2D/TEMP/
+project/Assets/2D/TEMP.meta
+project/Assets/StreamingAssets/ios/
+project/Assets/StreamingAssets/ios.meta
+project/Assets/StreamingAssets/android/
+project/Assets/StreamingAssets/android.meta
+project/Assets/ARSession/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreview.apk.meta
+
+# OS file ignores
+Thumbs.db
+.DS_Store
+
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Android Studio
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+build/
+.navigation
+captures/
+output.json 
+
+#NDK
+obj/
+.externalNativeBuild

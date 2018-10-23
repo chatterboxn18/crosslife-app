@@ -62,6 +62,7 @@ namespace CrossLife
 
 		public void ButtonEvt_Rides()
 		{
+			Debug.Log("Working");
 			Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLScIPHy1Cc57pqOTm2KE3ls-mCpUs0UKNrnEreXQOckplc2qPw/viewform");
 		}
 

@@ -77,8 +77,7 @@ namespace CrossLife
 		void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
 		{
 			isPressed = false;
-			Debug.Log("This is happening");
-			//OnPointerUp.Invoke();
+			OnPointerUp.Invoke();
 		}
 
 		//animator booleans
