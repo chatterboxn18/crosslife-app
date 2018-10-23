@@ -12,6 +12,7 @@ integration/ios/SampleApp/*.framework
 # Unity Project ignores
 CrossLife/CrossLifeApp/Library/
 CrossLife/CrossLifeApp/Temp/
+CrossLifeApp/Temp/
 CrossLife/CrossLifeApp/obj/
 CrossLife/CrossLifeApp/QCAR/
 CrossLife/CrossLifeApp/.vs/
