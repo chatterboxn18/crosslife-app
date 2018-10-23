@@ -16,7 +16,8 @@ namespace CrossLife
 		public bool Disabled;
 		public bool Visible;
 		public bool isToggle;
-		private bool Toggled;
+		[HideInInspector]
+		public bool Toggled;
 		
 		[Serializable]
 		public class ButtonEvent : UnityEvent

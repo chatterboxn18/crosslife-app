@@ -15,4 +15,11 @@ namespace CrossLife
 		Menu = 6
 	}
 
+	public enum AboutContent
+	{
+		Doctrine = 0, 
+		Leadership = 1, 
+		Membership = 2
+	}
+
 }

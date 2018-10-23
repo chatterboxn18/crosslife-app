@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CrossLife;
 using UnityEngine.EventSystems;
+using Vuforia;
 
 namespace CrossLife
 {
@@ -14,6 +15,9 @@ namespace CrossLife
 		private AppState _state;
 		private Animator _animator;
 
+		[SerializeField]
+		private lambo_button MenuButton;
+
 		private void Awake()
 		{
 			_animator = GetComponent<Animator>();
@@ -23,6 +27,12 @@ namespace CrossLife
 		{
 
 			yield return null;
+		}
+
+		private void MenuOff()
+		{
+			MenuButton.Toggled = false;
+			IsMenuVisible = false;
 		}
 
 		private void SetNextState(AppState nextState)
@@ -55,9 +65,21 @@ namespace CrossLife
 			IsMenuVisible = on;
 		}
 
+		public void ButtonEvt_MenuOff()
+		{
+			MenuOff();
+		}
+		
 		public void ButtonEvt_About()
 		{
+			DoAbout();
+		}
 
+		public void ButtonEvt_Doctine()
+		{
+			IntAboutContent = AboutContent.Doctrine;
+			IsAboutVisible = true;
+			MenuOff();
 		}
 
 		public void ButtonEvt_Rides()
@@ -100,6 +122,8 @@ namespace CrossLife
 			_animator.SetTrigger("DoMenu");
 		}
 		private bool IsMenuVisible { get { return _animator.GetBool("IsMenuVisible"); } set { _animator.SetBool("IsMenuVisible", value); } }		
+		private bool IsAboutVisible { get { return _animator.GetBool("IsAboutVisible"); } set { _animator.SetBool("IsAboutVisible", value); } }		
+		private AboutContent IntAboutContent { get { return (AboutContent) _animator.GetInteger("IntAboutContent"); } set { _animator.SetInteger("IntAboutContent", (int) value); } }
 	}
 }
 
