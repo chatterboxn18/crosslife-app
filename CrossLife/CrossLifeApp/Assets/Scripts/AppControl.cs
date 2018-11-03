@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using CrossLife;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Vuforia;
+using Image = UnityEngine.UI.Image;
 
 namespace CrossLife
 {
@@ -18,6 +20,9 @@ namespace CrossLife
 		[SerializeField]
 		private lambo_button MenuButton;
 
+		[SerializeField] private Text _aboutHeader;
+		[SerializeField] private RectTransform _panelMenu;
+
 		private void Awake()
 		{
 			_animator = GetComponent<Animator>();
@@ -26,6 +31,7 @@ namespace CrossLife
 		private IEnumerator Start()
 		{
 
+			_panelMenu.sizeDelta = new Vector2(Screen.width, _panelMenu.sizeDelta.y);
 			yield return null;
 		}
 
@@ -77,11 +83,37 @@ namespace CrossLife
 
 		public void ButtonEvt_Doctine()
 		{
-			IntAboutContent = AboutContent.Doctrine;
-			IsAboutVisible = true;
-			MenuOff();
+			StartCoroutine(DisplayContent(AboutContent.Doctrine));
 		}
 
+		public void ButtonEvt_Leadership()
+		{
+			StartCoroutine(DisplayContent(AboutContent.Leadership));
+		}
+
+		public void ButtonEvt_Membership()
+		{
+			StartCoroutine(DisplayContent(AboutContent.Membership));
+		}
+
+		private IEnumerator DisplayContent(AboutContent content)
+		{
+			IsAboutVisible = false;
+			var text = "";
+			switch (content)
+			{
+				case AboutContent.Doctrine: text = "Doctrine"; break;
+				case AboutContent.Leadership: text = "Leadership"; break;
+				case AboutContent.Membership: text = "Membership"; break;
+			}
+
+			_aboutHeader.text = text;
+			IntAboutContent = content;
+			IsAboutVisible = true;
+			MenuOff();
+			yield return null;
+		}
+		
 		public void ButtonEvt_Rides()
 		{
 			Debug.Log("Working");

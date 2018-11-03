@@ -10,6 +10,7 @@
           <e p="CarouselElement.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
           <e p="lambo_button.cs" t="Include" />
+          <e p="RectList.cs" t="Include" />
         </e>
       </e>
       <e p="CrossLifeApp.sln" t="IncludeFlat" />

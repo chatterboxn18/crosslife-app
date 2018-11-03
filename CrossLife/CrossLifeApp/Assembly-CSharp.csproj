@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\CarouselElement.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\lambo_button.cs" />
+    <Compile Include="Assets\Scripts\RectList.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Lambo/Documents/Personal Projects/CrossLife/CrossLifeApp/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
