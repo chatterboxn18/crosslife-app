@@ -2,22 +2,10 @@
 	"crosslifeSermons" : 
 	[
 		{
-			"seriesTitle" : "1 Thessalonians", 
-			"thumbnailUrl" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20180715+%7C+Thanking+God+for+the+Faithfulness+of+the+Saints+%7C+1+Thessalonians+1+1-5a-420x236.jpg",
-			"thumbnailPath" : "sermons/1Thessalonians/1-thessalonians.jpg",
-			"sermons" : 
-			[
-				{
-					"sermon-title" : "Respecting the Leaders of the Church",
-					"sermon-url" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20181104+%7C+Respecting+the+Leaders+of+the+Church+%7C+1+Thessalonians+5%3A12.mp3",
-					"sermon-date" : "11-08-2018"
-				},
-				{
-					"sermon-title" : "Preparing for hte Return of Jesus",
-					"sermon-url" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20181028+%7C+Preparing+for+the+Return+of+Jesus+%7C+1+Thessalonians+5%3A1-11.mp3",
-					"sermon-date" : "11-01-2018"
-				}
-			]
+			"sermon" : "a"
+		},
+		{
+			"sermon" : "b"
 		}
 	]
 }
