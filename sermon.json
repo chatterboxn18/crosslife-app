@@ -1,10 +1,10 @@
 {
-	"sermons" : 
+	"crosslifeSermons" : 
 	[
 		{
-			"series-title" : "1 Thessalonians", 
-			"thumbnail-url" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20180715+%7C+Thanking+God+for+the+Faithfulness+of+the+Saints+%7C+1+Thessalonians+1+1-5a-420x236.jpg",
-			"thumbnail-path" : "sermons/1Thessalonians/1-thessalonians.jpg",
+			"seriesTitle" : "1 Thessalonians", 
+			"thumbnailUrl" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20180715+%7C+Thanking+God+for+the+Faithfulness+of+the+Saints+%7C+1+Thessalonians+1+1-5a-420x236.jpg",
+			"thumbnailPath" : "sermons/1Thessalonians/1-thessalonians.jpg",
 			"sermons" : 
 			[
 				{
