@@ -20,6 +20,42 @@
 			]
 		},
 		{
+			"seriesTitle" : "1 Thessalonians", 
+			"thumbnailUrl" : "http://www.crosslifebiblechurch.org/wp-content/uploads/2018/07/1-thessalonians-thumbnail-300x300.png",
+			"thumbnailPath" : "sermons/icons/1-thessalonians.jpg",
+			"sermons" : 
+			[
+				{
+					"sermonTitle" : "Respecting the Leaders of the Church",
+					"sermonUrl" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20181104+%7C+Respecting+the+Leaders+of+the+Church+%7C+1+Thessalonians+5%3A12.mp3",
+					"sermonDate" : "11-08-2018"
+				},
+				{
+					"sermonTitle" : "Preparing for hte Return of Jesus",
+					"sermonUrl" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20181028+%7C+Preparing+for+the+Return+of+Jesus+%7C+1+Thessalonians+5%3A1-11.mp3",
+					"sermonDate" : "11-01-2018"
+				}
+			]
+		},
+		{
+			"seriesTitle" : "Old Testament Survey", 
+			"thumbnailUrl" : "http://www.crosslifebiblechurch.org/wp-content/uploads/2017/10/old-testament-survey-300x300.jpg",
+			"thumbnailPath" : "sermons/icons/otsurvey.jpg",
+			"sermons" : 
+			[
+				{
+					"sermonTitle" : "Genesis",
+					"sermonUrl" : "https://s3.us-west-2.amazonaws.com/crosslife-sermons-2.0/Old%20Testament%20Survey/20170908%20%7C%20Genesis.mp3?response-content-disposition=inline&X-Amz-Security-Token=AgoGb3JpZ2luEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiKAAp%2FBpAAi4fKpdrUFzKNR6dEoi%2Fu1j%2BJneW614fQpbUo6OaSReWRVbuk05UCsHqW6zOH9YWFgTyy557xkg2zC%2Fdb3nUTZ0mMKbayGgl4rcxVdVghBBCxnMB1Iv1NSFVQclF6hhAeRM8K%2B9zx567lWCtL1fzq8dR7W6ERzn5Am9NO2ro0Zx5HA8fGcEpsUeSJp0nnMQt4yFFJepsYJ5bZrOvwBHr6ivgEtHNYQqwmA2x2h%2BdzMKPMY1Do%2FSDo%2Bc2zzAVjksWpblf3yyK8eh4iOA5RcyU5KW7Sw%2F8PLyuE0GWuME3qqfaxK2%2FaFImIYmvIhAI0QysxzJ0cNdCbBANuJuuAq%2BwMIuP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NjQ4Njg3OTI4ODYiDAMs2aCe745L%2BAm40irPAzair1Q1XcjsDXZIKZD4GYd5H%2FecoGEwuTs2yIOgYY%2B5fQYDaMr%2Ft45%2Br83wa2y4YPuTx%2BNFv%2BYb3RSds5c0N8jILHscfq1sdmPFz%2F2QA%2FXXVCubAYFSMxXOTjPGpi1bnjiwajwSGMo2nmd%2BRpAWY34BRcF1mBDjdwBNVeiLp0MOmRUzg8uqdfBg1Q6FpRjQbXVp8IPIToH1H2KWA4ESQLousL5JKOm9k2tv9A%2B3rHCkKwS4DO6xe%2FNX8CsXGPpVAZCFpRSkXJH%2Bni6bxray8gad9NmkswW7qzQLvtiKxVgbcdzzP9d3uTLGpx74sJrw55pyec2%2F4PG3KhKhYAJw5FH9gedJP9L29VqyPebUzZ7CiR1U3Hx%2B57PHh47IQv77dmYBdq8M2EMu%2B1EZNSOh2pxgylJFJFCI%2B7Dlj2xOyq9hcQg7npNZk92bIN1D3vSG%2FnnYZMDenpdR9sH1iOh5ijPsjgdd9%2Fks6yssk5Y%2FeNJcHkqKrPGjyJs6uFizLOaO3xosRM2l0LUx9y0NaPGHTSklyF3FkaMFj6SthdcO20lCrqOeacU0odI1ZzU97mxvE073nA60X%2F09wRM%2FuBaGxMxdIInhQBuPq0CH0crCD3swpZK36AU%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190622T062749Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAWYPCW3I3LQIP2XOZ%2F20190622%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=88b4c10bfa16205d67244481833a8c49d07af89d11aa3bbdaf5a21d876e19734",
+					"sermonDate" : "10-13-2017"
+				},
+				{
+					"sermonTitle" : "Exodus",
+					"sermonUrl" : "https://s3.us-west-2.amazonaws.com/crosslife-sermons-2.0/Old%20Testament%20Survey/20170915%20%7C%20Exodus.mp3?response-content-disposition=inline&X-Amz-Security-Token=AgoGb3JpZ2luEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiKAAp%2FBpAAi4fKpdrUFzKNR6dEoi%2Fu1j%2BJneW614fQpbUo6OaSReWRVbuk05UCsHqW6zOH9YWFgTyy557xkg2zC%2Fdb3nUTZ0mMKbayGgl4rcxVdVghBBCxnMB1Iv1NSFVQclF6hhAeRM8K%2B9zx567lWCtL1fzq8dR7W6ERzn5Am9NO2ro0Zx5HA8fGcEpsUeSJp0nnMQt4yFFJepsYJ5bZrOvwBHr6ivgEtHNYQqwmA2x2h%2BdzMKPMY1Do%2FSDo%2Bc2zzAVjksWpblf3yyK8eh4iOA5RcyU5KW7Sw%2F8PLyuE0GWuME3qqfaxK2%2FaFImIYmvIhAI0QysxzJ0cNdCbBANuJuuAq%2BwMIuP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NjQ4Njg3OTI4ODYiDAMs2aCe745L%2BAm40irPAzair1Q1XcjsDXZIKZD4GYd5H%2FecoGEwuTs2yIOgYY%2B5fQYDaMr%2Ft45%2Br83wa2y4YPuTx%2BNFv%2BYb3RSds5c0N8jILHscfq1sdmPFz%2F2QA%2FXXVCubAYFSMxXOTjPGpi1bnjiwajwSGMo2nmd%2BRpAWY34BRcF1mBDjdwBNVeiLp0MOmRUzg8uqdfBg1Q6FpRjQbXVp8IPIToH1H2KWA4ESQLousL5JKOm9k2tv9A%2B3rHCkKwS4DO6xe%2FNX8CsXGPpVAZCFpRSkXJH%2Bni6bxray8gad9NmkswW7qzQLvtiKxVgbcdzzP9d3uTLGpx74sJrw55pyec2%2F4PG3KhKhYAJw5FH9gedJP9L29VqyPebUzZ7CiR1U3Hx%2B57PHh47IQv77dmYBdq8M2EMu%2B1EZNSOh2pxgylJFJFCI%2B7Dlj2xOyq9hcQg7npNZk92bIN1D3vSG%2FnnYZMDenpdR9sH1iOh5ijPsjgdd9%2Fks6yssk5Y%2FeNJcHkqKrPGjyJs6uFizLOaO3xosRM2l0LUx9y0NaPGHTSklyF3FkaMFj6SthdcO20lCrqOeacU0odI1ZzU97mxvE073nA60X%2F09wRM%2FuBaGxMxdIInhQBuPq0CH0crCD3swpZK36AU%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190622T062822Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAWYPCW3I3LQIP2XOZ%2F20190622%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=9ad682780de76b05c58f603a98210771de44b140ba77ac20e9319700d2870575",
+					"sermonDate" : "09-30-2017"
+				}
+			]
+		},
+		{
 			"seriesTitle" : "Old Testament Survey", 
 			"thumbnailUrl" : "http://www.crosslifebiblechurch.org/wp-content/uploads/2017/10/old-testament-survey-300x300.jpg",
 			"thumbnailPath" : "sermons/icons/otsurvey.jpg",
