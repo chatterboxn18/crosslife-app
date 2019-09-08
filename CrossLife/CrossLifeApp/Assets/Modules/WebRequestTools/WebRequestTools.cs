@@ -8,12 +8,11 @@ using UnityEngine.Networking;
 
 namespace CrossLife
 {
-	public class FileService : MonoBehaviour
+	public class WebRequestTools : Tool
 	{
-		[SerializeField] private AudioSource _player;
-
 		public enum MediaType
 		{
+			Text,
 			Texture, 
 			Audio
 		}
@@ -22,24 +21,41 @@ namespace CrossLife
 		/// Interface ///
 		/////////////////
 
-		public IEnumerator GetAudioFile(string path)
+		public IEnumerator GetAudioFile(string path, Action<AudioClip> onComplete)
 		{
 			yield return GetFile(path, MediaType.Audio, error => {  } , request =>
 			{
 				AudioClip clip = ((DownloadHandlerAudioClip) request.downloadHandler).audioClip;
 				if (clip == null)
-				{
 					Debug.LogError("The file that came back might be null or corrupt");
-				}
-				_player.clip = clip;
-				_player.Play();
+				else
+					onComplete(clip);
 			});
-			yield return null;
 			
 		}
-		
 
-		private IEnumerator DownloadFile(string path, string destPath, Action onError = null, Action onComplete = null)
+		public IEnumerator GetTextureFile(string path, Action<Texture2D> onComplete)
+		{
+			yield return GetFile(path, MediaType.Texture, error => { }, request =>
+			{
+				var tex = ((DownloadHandlerTexture)request.downloadHandler).texture;
+				if (tex == null)
+					Debug.LogError("The texture is null or corrupt");
+				else
+					onComplete(tex);
+			});
+			yield return null;
+		}
+
+		public IEnumerator GetJsonFile(string path, Action<string> onComplete)
+		{
+			yield return GetFile(path, MediaType.Text, error => { }, request =>
+				{
+					onComplete(request.downloadHandler.text);
+				});
+		}
+
+		public IEnumerator DownloadFile(string path, string destPath, Action onError = null, Action onComplete = null)
 		{
 			var umr = UnityWebRequest.Get(path);
 			umr.downloadHandler = new DownloadHandlerFile(Path.Combine(Application.persistentDataPath, destPath));
@@ -69,6 +85,10 @@ namespace CrossLife
 			}
 		}
 		
+		//////////////////////
+		/// Main Functions ///
+		//////////////////////
+		
 		private IEnumerator GetFile(string path, MediaType type, Action<string> onError = null, Action<UnityWebRequest> onComplete = null)
 		{
 			var finalPath = Path.Combine(Application.persistentDataPath, path);
@@ -80,6 +100,9 @@ namespace CrossLife
 			{
 				case MediaType.Audio:
 					umr = UnityWebRequestMultimedia.GetAudioClip(finalPath, AudioType.WAV);
+					break;
+				case MediaType.Texture:
+					umr = UnityWebRequestTexture.GetTexture(finalPath);
 					break;
 				default:
 					umr = UnityWebRequest.Get(finalPath);
@@ -99,12 +122,14 @@ namespace CrossLife
 			}
 			
 		}
+		
+		
 
-		public void DeleteFile()
+		public void DeleteFile(string path)
 		{
-			var path = Path.Combine(Application.persistentDataPath, "test/audio.wav");
-			if (File.Exists(path))
-				File.Delete(path);
+			var finalPath = Path.Combine(Application.persistentDataPath, path);
+			if (File.Exists(finalPath))
+				File.Delete(finalPath);
 			Resources.UnloadUnusedAssets();
 		}
 
@@ -121,7 +146,10 @@ namespace CrossLife
 
 		public void Evt_LoadAudio(string filePath)
 		{
-			StartCoroutine(GetAudioFile(filePath));
+			StartCoroutine(GetAudioFile(filePath, clip =>
+			{
+				
+			}));
 			//StartCoroutine(GetFile(filePath, MediaType.Audio));
 		}
 		

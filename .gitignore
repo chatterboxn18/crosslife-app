@@ -2,9 +2,12 @@
 /[Bb]uild/
 /[Bb]uilds/
 /screenshots/
+/[Ll]ibrary/
+/[Tt]emp/
 
 # Unity Project ignores
 CrossLife/CrossLifeApp/Library/
+CrossLifeApp/Library/
 CrossLife/CrossLifeApp/Temp/
 CrossLifeApp/Temp/
 CrossLife/CrossLifeApp/obj/

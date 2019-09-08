@@ -125,7 +125,8 @@ namespace CrossLife
 
 		public void ButtonEvt_Media()
 		{
-
+			IsMenuVisible = false;
+			DoMedia();
 		}
 
 		/// <summary>

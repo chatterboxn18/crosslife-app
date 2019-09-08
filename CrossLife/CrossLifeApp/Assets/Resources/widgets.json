@@ -1,20 +1,16 @@
 {
 	"main-carousel": [
 		{
-			"name": "Friday Night Bible Study",
-			"assets": ""
+			"name": "Moving",
+			"assets": "https://raw.githubusercontent.com/chatterboxn18/crosslife-app/master/CrossLife/CrossLifeApp/Assets/Art/carousel-images/moving-image.png"
 		},
 		{
 			"name": "Rides",
-			"assets": ""
-		},
-		{
-			"name": "Small Groups",
-			"assets": ""
+			"assets": "https://raw.githubusercontent.com/chatterboxn18/crosslife-app/master/CrossLife/CrossLifeApp/Assets/Art/carousel-images/rides-image.png"
 		},
 		{
 			"name": "Regional Groups",
-			"assets": ""
+			"assets": "https://raw.githubusercontent.com/chatterboxn18/crosslife-app/master/CrossLife/CrossLifeApp/Assets/Art/carousel-images/regionalgroup-image.png"
 		},
 
 	]

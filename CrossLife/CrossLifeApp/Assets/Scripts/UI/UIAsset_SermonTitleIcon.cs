@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using CrossLife;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class UIAsset_SermonTitleIcon : UIAsset
 {
 	public Image SermonIcon;
 	public Text TextTitle;
-	public List<PanelSermons.CrossLifeSermons.CrosslifeSermon.Sermon> Sermons;
+	public List<JSONReader.CrossLifeSermons.CrosslifeSermon.Sermon> Sermons;
 	public Action Evt_DisplaySermons = () => { }; 
 	
 	[SerializeField] private UIAsset_Sermon _sermonPrefab;
