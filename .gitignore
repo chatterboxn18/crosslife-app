@@ -3,9 +3,10 @@
 /[Bb]uilds/
 /screenshots/
 
-# CrossLife App Project ignores
+# Unity Project ignores
 CrossLife/CrossLifeApp/Library/
 CrossLife/CrossLifeApp/Temp/
+CrossLifeApp/Temp/
 CrossLife/CrossLifeApp/obj/
 CrossLife/CrossLifeApp/QCAR/
 CrossLife/CrossLifeApp/.vs/
@@ -34,42 +35,7 @@ CrossLife/CrossLifeApp/Assets/StreamingAssets/ios.meta
 CrossLife/CrossLifeApp/Assets/StreamingAssets/android/
 CrossLife/CrossLifeApp/Assets/StreamingAssets/android.meta
 CrossLife/CrossLifeApp/Assets/ARSession/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreview.apk.meta
-
-#Hebrews Ignore
-Hebrews/Hebrews/Library/
-Hebrews/Hebrews/Temp/
-Hebrews/Hebrews/obj/
-Hebrews/Hebrews/QCAR/
-Hebrews/Hebrews/.vs/
-Hebrews/Hebrews/.idea/
-Hebrews/Hebrews/*.sln
-Hebrews/Hebrews/*.csproj
-Hebrews/Hebrews/*.csproj.user
-Hebrews/Hebrews/*.unityproj
-Hebrews/Hebrews/*.userprefs
-Hebrews/Hebrews/NativePlugins/
-Hebrews/Hebrews/Assets/0_GITIgnore/
-Hebrews/Hebrews/Assets/0_GITIgnore.meta
-Hebrews/Hebrews/Assets/Models/
-Hebrews/Hebrews/Assets/Models.meta
-Hebrews/Hebrews/Assets/Plugins/Editor/JetBrains/
-Hebrews/Hebrews/Assets/Plugins/Editor/
-Hebrews/Hebrews/Assets/Plugins/Editor.meta
-Hebrews/Hebrews/Assets/Plugins/Editor/JetBrains.meta
-Hebrews/Hebrews/Assets/SVFUnityPlugin/PreviewAssets/
-Hebrews/Hebrews/Assets/2D/COMPS/
-Hebrews/Hebrews/Assets/2D/COMPS.meta
-Hebrews/Hebrews/Assets/2D/TEMP/
-Hebrews/Hebrews/Assets/2D/TEMP.meta
-Hebrews/Hebrews/Assets/StreamingAssets/ios/
-Hebrews/Hebrews/Assets/StreamingAssets/ios.meta
-Hebrews/Hebrews/Assets/StreamingAssets/android/
-Hebrews/Hebrews/Assets/StreamingAssets/android.meta
-Hebrews/Hebrews/Assets/ARSession/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreview.apk.meta
-
-#ignore Not related folders
-BudgetApp/
-Prayer_App/
+CrossLife/CrossLifeApp/Assets/Plugins/Editor/JetBrains/
 
 # OS file ignores
 Thumbs.db
