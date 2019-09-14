@@ -266,7 +266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -368.4}
+  m_AnchoredPosition: {x: 540, y: -368.39844}
   m_SizeDelta: {x: 680, y: 268.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &42014576
@@ -292,12 +292,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1172156261}
-        m_MethodName: ButtonEvt_Doctine
-        m_Mode: 1
+        m_MethodName: ButtonEvt_GoTo
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2089,12 +2089,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1172156261}
-        m_MethodName: ButtonEvt_Media
-        m_Mode: 1
+        m_MethodName: ButtonEvt_GoTo
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4813,7 +4813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: -0.000058454763}
   m_SizeDelta: {x: 0, y: 1534}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!225 &817886112
@@ -5478,7 +5478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -1173.6}
+  m_AnchoredPosition: {x: 540, y: -1173.6016}
   m_SizeDelta: {x: 680, y: 268.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1031265884
@@ -5953,7 +5953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuButton: {fileID: 531034945}
   _aboutHeader: {fileID: 1314842754}
-  _panelMenu: {fileID: 560457946}
   _panelHome: {fileID: 1641931333}
   _panelSermon: {fileID: 1838483635}
   _panelAudioPlayer: {fileID: 1830757925}
@@ -9601,7 +9600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -905.19995}
+  m_AnchoredPosition: {x: 540, y: -905.1992}
   m_SizeDelta: {x: 680, y: 268.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1882666020
@@ -9777,8 +9776,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1172156261}
-        m_MethodName: ButtonEvt_GoHome
-        m_Mode: 1
+        m_MethodName: ButtonEvt_GoTo
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11036,7 +11035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -636.8}
+  m_AnchoredPosition: {x: 540, y: -636.8008}
   m_SizeDelta: {x: 680, y: 268.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2141389337
