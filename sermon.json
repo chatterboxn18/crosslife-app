@@ -48,20 +48,20 @@
 			"sermons" : 
 			[
 				{
-					"sermonTitle" : "A Theology of Death and Resurrection An Introduction",
+					"sermonTitle" : "Genesis",
 					"sermonThumbnail" : "",
 					"sermonUrl" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20181104+%7C+Respecting+the+Leaders+of+the+Church+%7C+1+Thessalonians+5%3A12.mp3",
-					"sermonDate" : "04-22-2018",
+					"sermonDate" : "09-08-2017",
 					"sermonSpeaker" : "Pastor James", 
-					"sermonReference" : "Selected Passages"
+					"sermonReference" : "Book of Genesis"
 				},
 				{
-					"sermonTitle" : "Thanking God for the Faithfulness of the Saints",
+					"sermonTitle" : "Exodus",
 					"sermonThumbnail" : "",
 					"sermonUrl" : "https://s3-us-west-2.amazonaws.com/crosslife-sermons-2.0/1+%26+2+Thessalonians/20181028+%7C+Preparing+for+the+Return+of+Jesus+%7C+1+Thessalonians+5%3A1-11.mp3",
-					"sermonDate" : "07-15-2018",
+					"sermonDate" : "09-15-2017",
 					"sermonSpeaker" : "Pastor James", 
-					"sermonReference" : "1 Thessalonians 1:1-5a"
+					"sermonReference" : "Book of Exodus"
 				}
 			]
 		}
