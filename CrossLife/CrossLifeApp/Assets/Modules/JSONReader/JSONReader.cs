@@ -31,6 +31,8 @@ namespace CrossLife
 					public string sermonTitle;
 					public string sermonUrl;
 					public string sermonDate;
+					public string sermonSpeaker;
+					public string sermonReference;
 				}
 
 			}
