@@ -21,7 +21,7 @@ using SimpleJSON;
 	private int _sermonBuffer = 5;
 	
 	private List<UIAsset_SermonTitleIcon> _sermonIcons;
-	private List<GameObject> _sermonItems;
+	private List<UIAsset_Sermon> _sermonItems = new List<UIAsset_Sermon>();
 
 	private WebRequestTools _webRequestTools;
 	private JSONReader _jsonReader;
@@ -41,6 +41,8 @@ using SimpleJSON;
 		_jsonReader = AppUtilities.GetAppUtilies().GetComponentInChildren<JSONReader>();
 		
 		yield return null;
+		UnloadSermonGroup();
+		yield return new WaitUntil(() => _sermonGroup.childCount == 0);
 		yield return CreateSermonIcons();
 	}
 
@@ -79,26 +81,34 @@ using SimpleJSON;
 
 	private void ButtonEvt_CreateSermonItems(JSONReader.CrossLifeSermons.CrosslifeSermon sermonIcon)
 	{
-		UnloadSermonIcons();
-
+		UnloadSermonGroup();
+		var totalSize = 0f;
+		
 		var yBuffer = 0;
 		for (int i = 0; i < sermonIcon.sermons.Count; i++)
 		{
-			var sermonItem = Instantiate(_sermonItemPrefab, _sermonGroup);
+			var sermon = sermonIcon.sermons[i];
+			var sermonItem = Instantiate(_sermonItemPrefab, _sermonGroup).GetComponent<UIAsset_Sermon>();
+			_sermonItems.Add(sermonItem);
 			sermonItem.RectTransform.anchoredPosition = new Vector2(0, -sermonItem.RectTransform.rect.height * i - yBuffer);
+			sermonItem.Date.text = sermon.sermonDate;
+			sermonItem.Title.text = sermon.sermonTitle;
+			sermonItem.Byline.text = sermon.sermonSpeaker;
 			yBuffer += _sermonBuffer;
 		}
 	}
-
-	private void UnloadSermonIcons()
+	
+	private void UnloadSermonGroup()
 	{
-		if (_sermonIcons == null || _sermonIcons.Count <= 0)
-			return;
-		foreach (var sermonTitle in _sermonIcons)
+		if (_sermonGroup.childCount > 0)
 		{
-			Destroy(sermonTitle.gameObject);
-		}
+			for(var i = 0; i < _sermonGroup.childCount; i++)
+			{
+				Destroy(_sermonGroup.GetChild(i).gameObject);
+			}
 
+			Resources.UnloadUnusedAssets();
+		}
 	}
 	
 	private void ReadJson( )

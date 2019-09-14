@@ -12,6 +12,8 @@ namespace CrossLife
 	[RequireComponent(typeof(Animator))]
 	public class AppControl : MonoBehaviour
 	{
+		
+		
 		private AppState _nextState;
 		private AppState _state;
 		private Animator _animator;
@@ -20,8 +22,19 @@ namespace CrossLife
 		private lambo_button MenuButton;
 
 		[SerializeField] private Text _aboutHeader;
-		[SerializeField] private RectTransform _panelMenu;
 
+		[Header("Panels")] 
+		[SerializeField] private RectTransform _panelHome;
+		[SerializeField] private RectTransform _panelSermon;
+		[SerializeField] private RectTransform _panelAudioPlayer;
+
+		[Header("Transitions")] 
+		private AppState _currentAppState;
+		[SerializeField] private RectTransform _screenCanvas;
+		[SerializeField] private RectTransform _panelPrevious;
+		[SerializeField] private RectTransform _panelCurrent;
+		private static readonly int TransitionIndex = Animator.StringToHash("TransitionIndex");
+		
 		private void Awake()
 		{
 			_animator = GetComponent<Animator>();
@@ -30,7 +43,11 @@ namespace CrossLife
 		private IEnumerator Start()
 		{
 
-			_panelMenu.sizeDelta = new Vector2(Screen.width, _panelMenu.sizeDelta.y);
+			//Transition Setup
+			_panelPrevious.anchorMin = new Vector2(0.5f, 0.5f);
+			_panelPrevious.anchorMax = new Vector2(0.5f, 0.5f);
+			_panelPrevious.sizeDelta = new Vector2(1080f, 1920f);
+
 			yield return null;
 		}
 
@@ -48,7 +65,7 @@ namespace CrossLife
 				case AppState.Home:
 					DoHome();
 					break;
-				case AppState.Media:
+				case AppState.Sermons:
 					DoMedia();
 					break;
 				case AppState.Ministry:
@@ -65,6 +82,15 @@ namespace CrossLife
 			}
 		}
 
+		public void ButtonEvt_GoTo(int state)
+		{
+			IsMenuVisible = false;
+			if ((int) _currentAppState == state)
+				return;
+			var transition = (state > (int) _currentAppState) ? TransitionStyle.SlideRight: TransitionStyle.SlideLeft;
+			Evt_TransitionTo(_currentAppState, (AppState) state, transition);
+		}
+		
 		public void ButtonEvt_Menu(bool on)
 		{
 			IsMenuVisible = on;
@@ -123,12 +149,44 @@ namespace CrossLife
 
 		}
 
-		public void ButtonEvt_Media()
+		public void Evt_TransitionTo(AppState previousState, AppState currentState, TransitionStyle style)
 		{
-			IsMenuVisible = false;
-			DoMedia();
+			StartCoroutine(SetNextTransition(previousState, currentState, style));
 		}
 
+		
+		private RectTransform GetPanel(AppState state)
+		{
+			switch (state)
+			{
+				case AppState.Home:
+					return _panelHome;
+				case AppState.Sermons:
+					return _panelSermon;
+				default:
+					return _panelHome;
+			}
+		}
+		
+		private IEnumerator SetNextTransition(AppState previousState, AppState currentState, TransitionStyle style = TransitionStyle.None)
+		{
+			IsInTransition = true;
+			GetPanel(previousState).SetParent(_panelPrevious, false);
+			GetPanel(previousState).gameObject.SetActive(true);
+			GetPanel(currentState).SetParent(_panelCurrent, false);
+			GetPanel(currentState).gameObject.SetActive(true);
+			yield return null;
+			Transition = style;
+			yield return new WaitForSeconds(1/3f);
+			GetPanel(previousState).SetParent(_screenCanvas, false);
+			GetPanel(previousState).gameObject.SetActive(false);
+			GetPanel(currentState).SetParent(_screenCanvas, false);
+			Transition = TransitionStyle.None;
+			_currentAppState = currentState;
+			IsInTransition = false;
+			yield return null;
+		}
+		
 		/// <summary>
 		/// Animator Controls
 		/// </summary>
@@ -154,7 +212,11 @@ namespace CrossLife
 		}
 		private bool IsMenuVisible { get { return _animator.GetBool("IsMenuVisible"); } set { _animator.SetBool("IsMenuVisible", value); } }		
 		private bool IsAboutVisible { get { return _animator.GetBool("IsAboutVisible"); } set { _animator.SetBool("IsAboutVisible", value); } }		
+		private bool IsInTransition { get { return _animator.GetBool("IsInTransition"); } set { _animator.SetBool("IsInTransition", value); } }		
 		private AboutContent IntAboutContent { get { return (AboutContent) _animator.GetInteger("IntAboutContent"); } set { _animator.SetInteger("IntAboutContent", (int) value); } }
+		
+		private TransitionStyle Transition { get => (TransitionStyle)_animator.GetInteger(TransitionIndex); set => _animator.SetInteger(TransitionIndex, (int)value); }
+
 	}
 }
 
